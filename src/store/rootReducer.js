@@ -3,29 +3,31 @@ const initialState = {
 };
 
 const rootReducer = (state = initialState, action) => {
-  if (action.type === "INCREMENT") {
-    return {
-      counter: state.counter + 1,
-    };
+  switch (action.type) {
+    case "INCREMENT":
+      return {
+        counter: state.counter + 1,
+      };
+      break;
+    case "DECREMENT":
+      return {
+        counter: state.counter - 1,
+      };
+      break;
+    case "ADD_VALUE":
+      return {
+        counter: state.counter + action.payload.value,
+      };
+      break;
+    case "SUBSTRACT_VALUE":
+      return {
+        counter: state.counter - action.payload.value,
+      };
+      break;
+    default:
+      return state;
+      break;
   }
-
-  if (action.type === "DECREMENT") {
-    return {
-      counter: state.counter - 1,
-    };
-  }
-
-  if (action.type === "ADD_VALUE") {
-    return {
-      counter: state.counter + action.payload.value,
-    };
-  }
-  if (action.type === "SUBSTRACT_VALUE") {
-    return {
-      counter: state.counter - action.payload.value,
-    };
-  }
-  return state;
 };
 
 export default rootReducer;
