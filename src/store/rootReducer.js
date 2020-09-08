@@ -17,12 +17,12 @@ const rootReducer = (state = initialState, action) => {
 
   if (action.type === "ADD_VALUE") {
     return {
-      counter: state.counter + action.value,
+      counter: state.counter + action.payload.value,
     };
   }
-  if (action.type === "SUBSTRACT") {
+  if (action.type === "SUBSTRACT_VALUE") {
     return {
-      counter: state.counter - action.value,
+      counter: state.counter - action.payload.value,
     };
   }
   return state;

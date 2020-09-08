@@ -25,8 +25,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     increment: () => dispatch({ type: "INCREMENT" }),
     decrement: () => dispatch({ type: "DECREMENT" }),
-    addValue: () => dispatch({ type: "ADD_VALUE", value: 5 }),
-    substractValue: () => dispatch({ type: "SUBSTRACT", value: 5 }),
+    addValue: () => dispatch({ type: "ADD_VALUE", payload: { value: 5 } }),
+    substractValue: () =>
+      dispatch({ type: "SUBSTRACT_VALUE", payload: { value: 5 } }),
   };
 };
 
