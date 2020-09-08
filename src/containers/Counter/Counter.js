@@ -44,7 +44,7 @@ class Counter extends Component {
         />
         <CounterControl
           label="Add 5"
-          clicked={() => this.counterChangedHandler("add", 5)}
+          clicked={this.props.addValue}
         />
         <CounterControl
           label="Subtract 5"
@@ -64,7 +64,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     increment: () => dispatch({ type: "INCREMENT" }),
-    decrement: () => dispatch({ type: "DECREMENT"})
+    decrement: () => dispatch({ type: "DECREMENT"}),
+    addValue: () => dispatch({ type: "ADD_VALUE", value: 5})
   };
 };
 

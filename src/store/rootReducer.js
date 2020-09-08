@@ -14,6 +14,12 @@ const rootReducer = (state = initialState, action) => {
       counter: state.counter - 1
     }
   }
+
+  if (action.type === 'ADD_VALUE') {
+    return {
+      counter: state.counter + action.value
+    }
+  }
   return state
 }
 
