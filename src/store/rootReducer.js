@@ -1,26 +1,31 @@
 const initialState = {
-  counter: 0
-}
+  counter: 0,
+};
 
 const rootReducer = (state = initialState, action) => {
-  if (action.type === 'INCREMENT') {
+  if (action.type === "INCREMENT") {
     return {
-      counter: state.counter + 1
-    }
+      counter: state.counter + 1,
+    };
   }
 
-  if (action.type === 'DECREMENT') {
+  if (action.type === "DECREMENT") {
     return {
-      counter: state.counter - 1
-    }
+      counter: state.counter - 1,
+    };
   }
 
-  if (action.type === 'ADD_VALUE') {
+  if (action.type === "ADD_VALUE") {
     return {
-      counter: state.counter + action.value
-    }
+      counter: state.counter + action.value,
+    };
   }
-  return state
-}
+  if (action.type === "SUBSTRACT") {
+    return {
+      counter: state.counter - action.value,
+    };
+  }
+  return state;
+};
 
-export default rootReducer
+export default rootReducer;
