@@ -32,7 +32,7 @@ const rootReducer = (state = initialState, action) => {
       };
     case "DELETE_RESULT":
       const updatedResultsArray = state.results.filter(
-        (result) => result.id !== action.resultId
+        (result) => result.id !== action.payload
       );
       return {
         ...state,
