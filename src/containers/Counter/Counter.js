@@ -11,6 +11,9 @@ const Counter = (props) => {
       <CounterControl label="Decrement" clicked={props.decrement} />
       <CounterControl label="Add 5" clicked={props.addValue} />
       <CounterControl label="Subtract 5" clicked={props.substractValue} />
+      <hr />
+      <button onClick={props.onStoreResult}>Store Result</button>
+
     </div>
   );
 };
@@ -28,6 +31,7 @@ const mapDispatchToProps = (dispatch) => {
     addValue: () => dispatch({ type: "ADD_VALUE", payload: { value: 5 } }),
     substractValue: () =>
       dispatch({ type: "SUBSTRACT_VALUE", payload: { value: 5 } }),
+    onStoreResult: () => dispatch({type: 'STORE_RESULT'})
   };
 };
 

@@ -25,6 +25,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         counter: state.counter - action.payload.value,
       };
+    case "STORE_RESULT":
+      return {
+        ...state,
+        results: state.results.concat(state.counter)
+      }
     default:
       return state;
   }
