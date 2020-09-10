@@ -1,6 +1,6 @@
 const initialState = {
   counter: 0,
-  results: []
+  results: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -28,8 +28,8 @@ const rootReducer = (state = initialState, action) => {
     case "STORE_RESULT":
       return {
         ...state,
-        results: state.results.concat(state.counter)
-      }
+        results: state.results.concat(state.counter),
+      };
     default:
       return state;
   }
