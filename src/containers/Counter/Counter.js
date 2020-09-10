@@ -15,7 +15,7 @@ const Counter = (props) => {
       <button onClick={props.onStoreResult}>Store Result</button>
       <ul>
         {props.results.map((result) => (
-          <li key={result.id}>{result.value}</li>
+          <li key={result.id} onClick={props.onDeleteResult}>{result.value}</li>
         ))}
       </ul>
     </div>
@@ -37,6 +37,7 @@ const mapDispatchToProps = (dispatch) => {
     substractValue: () =>
       dispatch({ type: "SUBSTRACT_VALUE", payload: { value: 5 } }),
     onStoreResult: () => dispatch({ type: "STORE_RESULT" }),
+    onDeleteResult: () => dispatch({ type: "DELETE_RESULT"})
   };
 };
 

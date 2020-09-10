@@ -30,6 +30,10 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         results: state.results.concat({ id: new Date(), value: state.counter }),
       };
+    case "DELETE_RESULT": 
+      return {
+        ...state
+      }
     default:
       return state;
   }
