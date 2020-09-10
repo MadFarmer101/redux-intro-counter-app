@@ -13,11 +13,11 @@ const Counter = (props) => {
       <CounterControl label="Subtract 5" clicked={props.substractValue} />
       <hr />
       <button onClick={props.onStoreResult}>Store Result</button>
-      {props.results.map((result) => (
-        <ul>
-          <li>{result}</li>
-        </ul>
-      ))}
+      <ul>
+        {props.results.map((result) => (
+          <li key={result.id}>{result.value}</li>
+        ))}
+      </ul>
     </div>
   );
 };
