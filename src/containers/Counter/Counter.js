@@ -27,8 +27,8 @@ const Counter = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    cntr: state.counter,
-    results: state.results,
+    cntr: state.counter.counter,
+    results: state.results.results,
   };
 };
 
