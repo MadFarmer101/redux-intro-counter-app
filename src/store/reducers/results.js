@@ -4,7 +4,7 @@ const initialState = {
   results: [],
 };
 
-const rootReducer = (state = initialState, action) => {
+const resultsReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.STORE_RESULT:
       return {
@@ -24,4 +24,4 @@ const rootReducer = (state = initialState, action) => {
   }
 };
 
-export default rootReducer;
+export default resultsReducer;
