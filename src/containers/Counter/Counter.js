@@ -13,7 +13,7 @@ const Counter = (props) => {
       <CounterControl label="Add 5" clicked={props.addValue} />
       <CounterControl label="Subtract 5" clicked={props.substractValue} />
       <hr />
-      <button onClick={props.onStoreResult}>Store Result</button>
+      <button onClick={() => props.onStoreResult(props.cntr)}>Store Result</button>
       <ul>
         {props.results.map((result) => (
           <li key={result.id} onClick={() => props.onDeleteResult(result.id)}>
@@ -39,7 +39,7 @@ const mapDispatchToProps = (dispatch) => {
     addValue: () => dispatch({ type: actionTypes.ADD_VALUE, payload: { value: 5 } }),
     substractValue: () =>
       dispatch({ type: actionTypes.SUBSTRACT_VALUE, payload: { value: 5 } }),
-    onStoreResult: () => dispatch({ type: actionTypes.STORE_RESULT }),
+    onStoreResult: (result) => dispatch({ type: actionTypes.STORE_RESULT, payload: result }),
     onDeleteResult: (id) => dispatch({ type: actionTypes.DELETE_RESULT, payload: id }),
   };
 };
