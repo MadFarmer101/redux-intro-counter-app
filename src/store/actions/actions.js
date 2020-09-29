@@ -17,17 +17,17 @@ export const decrement = () => {
   };
 };
 
-export const addValue = () => {
+export const addValue = (value) => {
   return {
     type: ADD_VALUE,
-    payload: { value: 5 }
+    payload: { value: value }
   };
 };
 
-export const substractValue = () => {
+export const substractValue = (value) => {
   return {
     type: SUBSTRACT_VALUE,
-    payload: { value: 5 }
+    payload: { value: value }
   };
 };
 

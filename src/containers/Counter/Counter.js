@@ -45,10 +45,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     increment: () => dispatch(increment()),
     decrement: () => dispatch(decrement()),
-    addValue: () => dispatch(addValue()),
-    substractValue: () => dispatch(substractValue()),
-    onStoreResult: () => dispatch(storeResult()),
-    onDeleteResult: () => dispatch(deleteResult()),
+    addValue: () => dispatch(addValue(5)),
+    substractValue: () => dispatch(substractValue(5)),
+    onStoreResult: (result) => dispatch(storeResult(result)),
+    onDeleteResult: (id) => dispatch(deleteResult(id)),
   };
 };
 
