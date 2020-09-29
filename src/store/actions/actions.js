@@ -20,27 +20,27 @@ export const decrement = () => {
 export const addValue = (value) => {
   return {
     type: ADD_VALUE,
-    payload: { value: value }
+    payload: { value: value },
   };
 };
 
 export const substractValue = (value) => {
   return {
     type: SUBSTRACT_VALUE,
-    payload: { value: value }
+    payload: { value: value },
   };
 };
 
 export const storeResult = (result) => {
   return {
     type: STORE_RESULT,
-    payload: result
+    payload: result,
   };
 };
 
 export const deleteResult = (id) => {
   return {
     type: DELETE_RESULT,
-    payload: id
+    payload: id,
   };
 };
