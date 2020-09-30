@@ -1,8 +1,8 @@
-import * as actionsTypes from "./actionsTypes" 
+import * as actionTypes from "./actionTypes" 
 
 export const saveResult = (result) => {
   return {
-    type: actionsTypes.STORE_RESULT,
+    type: actionTypes.STORE_RESULT,
     payload: result,
   };
 };
@@ -17,7 +17,7 @@ export const storeResult = (result) => {
 
 export const deleteResult = (id) => {
   return {
-    type: actionsTypes.DELETE_RESULT,
+    type: actionTypes.DELETE_RESULT,
     payload: id,
   };
 };

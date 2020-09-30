@@ -1,27 +1,27 @@
-import * as actionsTypes from "./actionsTypes"
+import * as actionTypes from "./actionTypes"
 
 export const increment = () => {
   return {
-    type: actionsTypes.INCREMENT,
+    type: actionTypes.INCREMENT,
   };
 };
 
 export const decrement = () => {
   return {
-    type: actionsTypes.DECREMENT,
+    type: actionTypes.DECREMENT,
   };
 };
 
 export const addValue = (value) => {
   return {
-    type: actionsTypes.ADD_VALUE,
+    type: actionTypes.ADD_VALUE,
     payload: { value: value },
   };
 };
 
 export const substractValue = (value) => {
   return {
-    type: actionsTypes.SUBSTRACT_VALUE,
+    type: actionTypes.SUBSTRACT_VALUE,
     payload: { value: value },
   };
 };
