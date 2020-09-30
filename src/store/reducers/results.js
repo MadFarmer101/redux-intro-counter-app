@@ -5,6 +5,13 @@ const initialState = {
   results: [],
 };
 
+const deleteResult = (state, action) => {
+  const updatedResultsArray = state.results.filter(
+    (result) => result.id !== action.payload
+  );
+  return updateObject(state, { results: updatedResultsArray });
+};
+
 const resultsReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.STORE_RESULT:
@@ -15,10 +22,7 @@ const resultsReducer = (state = initialState, action) => {
         }),
       });
     case actionTypes.DELETE_RESULT:
-      const updatedResultsArray = state.results.filter(
-        (result) => result.id !== action.payload
-      );
-      return updateObject(state, { results: updatedResultsArray });
+      return deleteResult(state, action);
     default:
       return state;
   }
